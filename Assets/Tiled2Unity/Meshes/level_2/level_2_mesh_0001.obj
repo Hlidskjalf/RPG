@@ -1,5 +1,5 @@
 ﻿# Tiled2Unity generated file. Do not modify by hand.
-# Wavefront file for 'second-level_mesh_0001.obj'
+# Wavefront file for 'level_2_mesh_0001.obj'
 
 # Vertices (Count = 2028)
 v 0 -67 0
@@ -2045,7 +2045,7 @@ vt 0 0.3684211
 vn 0 0 -1
 
 # Mesh description
-g second-level_mesh_0001
+g level_2_mesh_0001
 
 # Faces
 f 1/1/1 2/2/1 3/3/1 4/4/1

@@ -34,15 +34,13 @@ public class Movement : MonoBehaviour {
     void Update () {
         float moveHorizontal = Input.GetAxis("Horizontal");
         rb.AddForce(new Vector3(moveHorizontal, 0) * speed, ForceMode2D.Impulse);
-        if (Mathf.Abs(rb.velocity.x) >= maxSpeed) {
-            rb.AddForce(new Vector3(moveHorizontal, 0) * -(Mathf.Abs(rb.velocity.x) - maxSpeed), ForceMode2D.Impulse);
-        }
-        
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             rb.AddForce(jump * jumpSpeed, ForceMode2D.Impulse);
         }
-        //Make sure we can max out speed
-        
+        if (Mathf.Abs(rb.velocity.x) >= maxSpeed) {
+            rb.AddForce(new Vector3(moveHorizontal, 0) * -(Mathf.Abs(rb.velocity.x) - maxSpeed), ForceMode2D.Impulse);
+        }
+       
     }
 }
