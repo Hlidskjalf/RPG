@@ -25,5 +25,12 @@ public class Movement2 : MonoBehaviour {
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
+        if (Input.GetKeyDown("return")) {
+            RoomManager.ChangeRoom("Level 2");
+            Debug.Log("Changed room!");
+        }
+
+
+
     }
 }
