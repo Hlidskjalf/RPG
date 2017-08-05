@@ -39,6 +39,12 @@ class CustomImporterAddComponent : Tiled2Unity.ICustomTiledImporter
 
     public void CustomizePrefab(GameObject prefab)
     {
-        // Do nothing
+        PlatformEffector2D pe2 = prefab.AddComponent<PlatformEffector2D>();
+        pe2.useOneWay = false;
+
+        if (prefab.GetComponent<PolygonCollider2D>() != null) {
+            prefab.GetComponent<PolygonCollider2D>().usedByEffector = true;
+        }
+
     }
 }
