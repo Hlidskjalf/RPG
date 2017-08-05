@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" nextobjectid="3">
  <tileset firstgid="1" name="RexRules" tilewidth="32" tileheight="32" tilecount="171" columns="9">
   <image source="../../../../Pictures/RexRules.png" width="288" height="608"/>
   <tile id="9">
@@ -11,6 +11,9 @@
   </tile>
  </tileset>
  <layer name="Tile Layer 1" width="10" height="10">
+  <properties>
+   <property name="unity:layer" value="Background"/>
+  </properties>
   <data encoding="csv">
 10,10,10,10,10,10,10,10,10,10,
 10,0,0,0,0,0,0,0,0,10,
@@ -19,9 +22,19 @@
 10,0,0,0,0,0,0,0,0,10,
 10,0,0,0,0,0,0,0,0,10,
 10,0,0,10,10,10,10,10,10,10,
-10,0,0,0,0,0,0,0,0,10,
-10,0,0,0,0,0,0,0,0,10,
+10,0,0,0,0,0,0,0,16,10,
+10,0,0,0,0,0,0,0,16,10,
 10,10,10,10,10,10,10,10,10,10
 </data>
  </layer>
+ <objectgroup name="Object Layer 1">
+  <properties>
+   <property name="unity:ignore" value="collision"/>
+  </properties>
+  <object id="1" x="256" y="224" width="32" height="64">
+   <properties>
+    <property name="Teleporter" value="level_2,20,0"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
