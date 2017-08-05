@@ -19,7 +19,8 @@ namespace Tiled2Unity
     }
 }
 
-//This is where we can create our own custom prefabs based off different bits of info in Tiled
+// Examples
+/*
 [Tiled2Unity.CustomTiledImporter]
 class CustomImporterAddComponent : Tiled2Unity.ICustomTiledImporter
 {
@@ -27,24 +28,16 @@ class CustomImporterAddComponent : Tiled2Unity.ICustomTiledImporter
         IDictionary<string, string> props)
     {
         // Simply add a component to our GameObject
-        if (props.ContainsKey("Teleporter"))
+        if (props.ContainsKey("AddComp"))
         {
-            string s = props["Teleporter"];
-            Door d = gameObject.AddComponent<Door>();
-            d.GotoRoom = s.Split(',')[0];
-            d.RoomPosition = new Vector2(float.Parse(s.Split(',')[1]), float.Parse(s.Split(',')[2]));
+            gameObject.AddComponent(props["AddComp"]);
         }
     }
 
 
     public void CustomizePrefab(GameObject prefab)
     {
-        PlatformEffector2D pe2 = prefab.AddComponent<PlatformEffector2D>();
-        pe2.useOneWay = false;
-
-        if (prefab.GetComponent<PolygonCollider2D>() != null) {
-            prefab.GetComponent<PolygonCollider2D>().usedByEffector = true;
-        }
-
+        // Do nothing
     }
 }
+*/
