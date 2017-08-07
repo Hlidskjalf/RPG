@@ -11,8 +11,9 @@ namespace Logic.States {
         Stack<IState> mStack = new Stack<IState>();
 
         public void Update() {
-            IState top = mStack.First();
-            top.Update();
+            Debug.Log(mStack.Count);
+            mStack.First().Update();
+            
         }
 
         public void Add(string name, IState state) {
@@ -20,7 +21,7 @@ namespace Logic.States {
             mStates[name].stateStack = this;
         }
 
-        public void Push(String name) {
+        public void Push(string name) {
             IState state = mStates[name];
             mStack.Push(state);
             state.OnEnter();

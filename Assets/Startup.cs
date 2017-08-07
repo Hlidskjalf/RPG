@@ -1,4 +1,5 @@
-﻿using Logic.States;
+﻿using Assets.Logic.States;
+using Logic.States;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,10 @@ public class Startup : MonoBehaviour {
 
         //Add all possible states here
         stateStack.Add("Game", new GameState());
+        stateStack.Add("Battle", new FightState());
 
         //Push the first thingy on
-        stateStack.Push("Game");
+        stateStack.Push("Battle");
     }
 	
 	// Update is called once per frame

@@ -20,6 +20,7 @@ namespace Logic.States {
             RoomManager.AddRoom(new Room("Level 2", (GameObject)Resources.Load("Levels/level_1")));
 
             RoomManager.ChangeRoom("Level 1");
+
         }
 
         public void OnExit() {
