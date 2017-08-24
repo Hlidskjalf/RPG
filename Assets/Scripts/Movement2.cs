@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CNControls;
 
 public class Movement2 : MonoBehaviour {
 
@@ -16,8 +15,8 @@ public class Movement2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float moveHorizontal = CnControls.GetAxis("Horizontal");
-        float moveVertical = CnControls.GetAxis("Vertical");
+		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveVertical = Input.GetAxis("Vertical");
 
 
         rb.velocity = new Vector3(moveHorizontal, moveVertical) * speed;
